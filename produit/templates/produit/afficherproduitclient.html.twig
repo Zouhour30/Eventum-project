@@ -1,0 +1,42 @@
+{% extends 'base-front.html.twig' %}
+{% block body %}
+
+
+
+    <section class="py-6">
+        <div class="container">
+            <div class="swiper-container  mx-n2 pt-0">
+                <div class="swiper-wrapper pb-5">
+                    <!-- Slides-->
+                    <div class="swiper-slide h-auto px-2">
+
+
+
+
+                        {% for i in tableproduits %}
+
+
+            <div class="swiper-slide h-auto px-2">
+                <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="#"></a><img class="bg-image" src="{{ asset('/back/images/')}}{{ i.image }}" alt="Card image">
+                    <div class="card-body overlay-content">
+                        <h1 class="card-title text-shadow text-uppercase">{{ i.nom }}</h1>
+                        <p class="card-text text-sm"> {{ i.desciption }}</p>
+
+                        <div><h4>{{ i.prix }} dt</h4></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+
+
+{% endblock %}

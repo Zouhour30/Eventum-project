@@ -1,0 +1,47 @@
+{% extends 'base-back.html.twig' %}
+{% block body %}
+
+<h1 class="h3 mb-2 text-gray-800">Ajouter une Commande</h1>
+
+<div class="form-group">
+    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}} ) }}
+
+    <div class="form-group" data-sb-validations="required">
+        {{ form_label(form.nomutilisateur	, 'nomutilisateur')  }}
+        {{ form_widget(form.nomutilisateur	  ,{'attr': {'class': 'form-control form-control-user' , 'placeholder' : ' nomutilisateur'}} ) }}
+        {{ form_errors(form.nomutilisateur ) }}
+
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.adress, ' adress')  }}
+
+        {{ form_widget(form.adress , {'attr': {'class': 'form-control form-control-user' , 'placeholder' : 'adress '}} ) }}
+        {{ form_errors(form.adress) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.date, 'date')  }}
+
+        {{ form_widget(form.date , {'attr': {'class': 'form-control form-control-user' , 'placeholder' : 'date'}} ) }}
+        {{ form_errors(form.date) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.tel, 'tel')  }}
+
+        {{ form_widget(form.tel , {'attr': {'class': 'form-control form-control-user' , 'placeholder' : 'tel'}} ) }}
+        {{ form_errors(form.tel) }}
+    </div>
+
+
+
+
+
+
+
+    {{ form_end(form) }}
+    {% endblock %}
+
+
+
