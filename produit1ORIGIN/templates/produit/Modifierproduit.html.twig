@@ -1,0 +1,53 @@
+{% extends 'base-back.html.twig' %}
+
+
+{% block body %}
+
+<h1  style="color:#ffa500"  class="h3 mb-2 text-gray-800">Modifier un Produit</h1>
+
+<div class="form-group">
+    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}} ) }}
+
+    <div class="form-group" data-sb-validations="required">
+        {{ form_label(form.nom	, ' nom')  }}
+        {{ form_widget(form.nom	  ,{'attr': {'class': 'form-control form-control-user' , 'placeholder' : ' nom'}} ) }}
+        {{ form_errors(form.nom ) }}
+
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.desciption, ' desciption')  }}
+
+        {{ form_widget(form.desciption , {'attr': {'class': 'form-control form-control-user' , 'placeholder' : 'desciption '}} ) }}
+        {{ form_errors(form.desciption) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.prix, 'prix')  }}
+
+        {{ form_widget(form.prix , {'attr': {'class': 'form-control form-control-user' , 'placeholder' : 'prix'}} ) }}
+        {{ form_errors(form.prix) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.stock, 'stock')  }}
+
+        {{ form_widget(form.stock , {'attr': {'class': 'form-control form-control-user' , 'placeholder' : 'stock'}} ) }}
+        {{ form_errors(form.stock) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.image, 'image')  }}
+
+        {{ form_widget(form.image , {'attr': {'class': 'form-control form-control-user' , 'placeholder' : 'image'}} ) }}
+        {{ form_errors(form.image) }}
+    </div>
+
+
+
+
+    {{ form_end(form) }}
+    {% endblock %}
+
+
+

@@ -1,0 +1,22 @@
+{% extends 'base-front.html.twig' %}
+
+{% block body %}
+
+
+    <section class="py-6">
+
+
+    <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="#"></a><img class="bg-image" src="{{ asset('/back/images/')}}{{produit.image }}" alt="Card image">
+      <h1> {{ produit.nom }}</h1>
+        <h6> {{ produit.desciption }}</h6>
+
+<h4>  {{ produit.prix }}</h4>
+
+    </div>
+
+
+
+
+    </section>
+
+{% endblock %}
